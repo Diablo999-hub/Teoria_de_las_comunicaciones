@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Menú de Prácticas</title>
-</head>
-<body>
-    <h1>Prácticas</h1>
+{% extends "app_practicas/base.html" %}
+
+{% block title %}Menu de Practicas{% endblock%}
+
+{% block header %}Lista de Practicas{% endblock header%}
+{% block content %}
     <ul>
-        {% for p in practicas %}
-            <li><a href="{% url 'detalle' p.id %}">{{ p.nombre }}</a></li>
-        {% endfor %}
+    {% for practica in practicas %}
+    <li>
+        <a href="{% url 'detalle' practica.id  %}">{{ practica.nombre }}</a>
+    </li>
+    {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ practica.nombre }}</title>
-</head>
-<body>
-    <h1>{{ practica.nombre }}</h1>
+{% extends 'app_practicas/base.html' %}
 
-        <p><strong>Objetivo: </strong> {{ practica.objetivo }}</p>
-        <div>
-        {{ practica.contenido_html|safe }}  
-        </div>
+{% block title %}{{ practica.nombre }}{% endblock %}
 
-    <a href="/">Volver</a>
-</body>
-</html>
+{% block header %}{{ practica.nombre }}{% endblock %}
+
+{% block content %}
+    <h3>Objetivo</h3>
+    <p>{{ practica.objetivo }}</p>
+    
+    <h3>Contenido</h3>
+    <div>
+        {{ practica.contenido.html|safe }}
+    </div>
+{% endblock %}
