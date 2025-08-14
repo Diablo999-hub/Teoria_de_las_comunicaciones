@@ -11,4 +11,5 @@ def inicio(request):
 
 def detalle(request, id):
     practica = get_object_or_404(Practicas, id=id)
-    return render(request, "detalle.html", {"practica": practica})
+    practicas = Practicas.objects.all()
+    return render(request, "inicio.html", {"practica": practica, "practicas": practicas})
