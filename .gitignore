@@ -1,25 +1,3 @@
-
-*.pyc
-__pycache__/
-*.pyo
-*.pyd
-*.db
-*.sqlite3
-*.log
-*.pot
-*.bak
-*.swp
-*.swo
-*.~
-*.tmp
-*.egg-info/
-*.egg
-env/
-.env
-.vscode/
-# Ignorar migraciones (opcional, descomenta la siguiente línea si NO quieres versionarlas)
-# app_practicas/migrations/
-=======
 # Byte-compiled / cache
 __pycache__/
 *.py[cod]
@@ -46,5 +24,4 @@ htmlcov/
 
 # Archivos de Django collectstatic (si usaras STATIC_ROOT en deploy)
 staticfiles/
-
 
