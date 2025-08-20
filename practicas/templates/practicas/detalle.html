@@ -1,0 +1,25 @@
+{% extends "practicas/base.html" %}
+{% block title %}{{ practica.titulo }} — Aula{% endblock %}
+
+{% block menu %}
+  {% for p in practicas %}
+    <a href="{% url 'practica_detalle' slug=p.slug %}"
+       {% if p.pk == practica.pk %}style="background:#334155;color:white"{% endif %}>
+       {{ p.titulo }}
+    </a>
+  {% endfor %}
+{% endblock %}
+
+{% block header %}
+  <strong>{{ practica.titulo }}</strong>
+{% endblock %}
+
+{% block content %}
+  <div class="objetivo"><strong>Objetivo:</strong> {{ practica.objetivo }}</div>
+
+  <!-- Renderiza el HTML tal cual -->
+  <article>
+    {{ practica.contenido_html|safe }}
+  </article>
+{% endblock %}
+

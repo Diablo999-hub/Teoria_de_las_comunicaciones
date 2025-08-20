@@ -1,0 +1,19 @@
+{% extends "practicas/base.html" %}
+{% block title %}Inicio — Aula{% endblock %}
+
+{% block menu %}
+  {% for p in practicas %}
+    <a href="{% url 'practica_detalle' slug=p.slug %}">{{ p.titulo }}</a>
+  {% empty %}
+    <span>No hay prácticas aún.</span>
+  {% endfor %}
+{% endblock %}
+
+{% block header %}
+  <strong>Menú de unidades / prácticas</strong>
+{% endblock %}
+
+{% block content %}
+  <p>Selecciona una práctica en el menú para ver sus detalles.</p>
+{% endblock %}
+

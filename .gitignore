@@ -1,0 +1,50 @@
+
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.pot
+*.bak
+*.swp
+*.swo
+*.~
+*.tmp
+*.egg-info/
+*.egg
+env/
+.env
+.vscode/
+# Ignorar migraciones (opcional, descomenta la siguiente línea si NO quieres versionarlas)
+# app_practicas/migrations/
+=======
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Entorno virtual
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs y OS
+.vscode/
+.idea/
+.DS_Store
+
+# SQLite (opcional ignorar si no quieres versionar la BD)
+# db.sqlite3
+
+# Archivos de cobertura / pruebas
+.coverage
+htmlcov/
+
+# Archivos de Django collectstatic (si usaras STATIC_ROOT en deploy)
+staticfiles/
+
+
