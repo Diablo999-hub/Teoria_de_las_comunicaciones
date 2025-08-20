@@ -16,7 +16,7 @@ env/
 .DS_Store
 
 # SQLite (opcional ignorar si no quieres versionar la BD)
-# db.sqlite3
+db.sqlite3
 
 # Archivos de cobertura / pruebas
 .coverage
